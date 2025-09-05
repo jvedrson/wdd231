@@ -1,0 +1,38 @@
+/******************************* HEADER  *******************************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: center;
+    padding: 5px 0px 5px 10px;
+    column-gap: 8px;
+    border-bottom: solid 1px #ddd;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: black;
+}
+
+/******************************* HAMBURGER NAVIGATION  *******************************/
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
