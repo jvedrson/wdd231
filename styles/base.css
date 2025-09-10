@@ -1,23 +1,56 @@
+/* COLORS */
+
+.text-green {
+    color: green;
+}
+
+.text-darkred {
+    color: darkred;
+}
+
+/******************************* BODY *******************************/
+
+body {
+    font-family: 'Segoe UI', "Verdana", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h2 {
+    margin-top: 0;
+    color: #004466;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 /******************************* HEADER  *******************************/
 header {
-    display: grid;
-    grid-template-columns: 24px auto 44px;
-    align-items: center;
-    padding: 5px 0px 5px 10px;
-    column-gap: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
     border-bottom: solid 1px #ddd;
 }
 
-header img {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding-bottom: 5px;
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-header span {
+header .logo img {
+    width: 48px;
+}
+
+header .logo span {
     font-size: 1.2rem;
     color: black;
+    font-weight: bold;
 }
 
 /******************************* HAMBURGER NAVIGATION  *******************************/
@@ -27,6 +60,7 @@ header span {
     cursor: pointer;
     font-size: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
 }
 
 .hamburger::before {

@@ -1,0 +1,36 @@
+@media only screen and (max-width: 38rem) {
+    .home-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-content .box-profile {
+        display: block;
+    }
+
+    .home-content .box-profile .box-about {
+        width: auto;
+        min-height: 180px;
+    }
+
+    .home-content .box-profile .box-photo {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        text-align: center;
+    }
+
+    .home-content .box-profile .box-photo img {
+        /* min-width: 300px; */
+        border-radius: 8px;
+    }
+
+}
+
+@media only screen and (max-width: 508px) {
+    .box-courses .box-courses-content {
+        display: grid;
+        gap: 10px;
+    }
+}
