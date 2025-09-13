@@ -9,8 +9,34 @@ header,
 footer {
     background: #1976d2;
     color: #fff;
-    text-align: center;
     padding: 1rem 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+header .logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* Navigation */
@@ -172,11 +198,11 @@ main {
 }
 
 footer {
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    background: #1976d2;
+    /* margin-top: 1rem; */
+    background: #1565c0;
+    text-align: center;
     color: #fff;
-    padding: 1.5rem 0 1rem 0;
+    padding: 1rem;
 }
 
 .footer-flex {
