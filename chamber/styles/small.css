@@ -13,11 +13,22 @@
         gap: 1rem;
     }
 
+    footer .footer-left {
+        display: none;
+    }
+
     footer .footer-flex .footer-center {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        padding: 0;
         width: 50px;
         height: 60px;
+    }
+
+    footer .footer-right, footer .footer-left, footer .footer-center {
+        padding: 0;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 }

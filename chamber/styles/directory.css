@@ -125,6 +125,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin: 0 auto;
+    min-height: 400px;
     max-width: 1200px;
 }
 
@@ -224,18 +225,4 @@ footer {
 
 .footer-center a:hover img {
     filter: brightness(0.8) invert(0.7) sepia(1) saturate(5) hue-rotate(180deg);
-}
-
-@media (max-width: 800px) {
-    .footer-flex {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .footer-left,
-    .footer-center,
-    .footer-right {
-        text-align: center;
-    }
 }

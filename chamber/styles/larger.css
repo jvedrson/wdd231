@@ -26,3 +26,17 @@
         border: none;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .footer-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        text-align: center;
+    }
+}

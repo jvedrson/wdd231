@@ -14,10 +14,16 @@
         content="Discover local businesses, events, and networking opportunities in Guayana.">
     <meta property="og:image" content="images/favicon.ico">
     <meta property="og:url" content="https://jvedrson.github.io/chamber/directory.html">
-    <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preload" href="../styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/directory.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../styles/normalize.css">
+        <link rel="stylesheet" href="styles/directory.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/larger.css">
+    </noscript>
     <script src="scripts/directory.js" defer></script>
     <script src="../scripts/dates.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
@@ -63,7 +69,7 @@
                 <p>Guayana Chamber of Commerce</p>
                 <p>123 Main St, Guayana, Venezuela</p>
                 <p><a href="mailto:chamber@guayana.com">chamber@guayana.com</a></p>
-                <p>Mon-Fri,  9am - 5pm</p>
+                <p>Mon-Fri, 9am - 5pm</p>
                 <p>+58 286-1234567</p>
             </div>
             <div class="footer-center">
@@ -77,8 +83,7 @@
             <div class="footer-right">
                 <p>WDD231 - Web Development I</p>
                 <p>Ederson Villalba</p>
-                <p>Last Modification: <span id="lastModified"></span></p>
-                <p>&copy; <span id="currentyear"></span></p>
+                <p>Last Modification: &copy; <span id="currentyear"></span> <span id="lastModified"></span></p>
             </div>
         </div>
     </footer>
