@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Traki",
+    "address": "Av. Paseo Caroní, in front of the Redoma de la Guardia Nacional, Puerto Ordaz, Bolívar State, Venezuela",
+    "phone": "+58 286 923 8080",
+    "website": "https://www.traki.com.ve/",
+    "image": "https://images.squarespace-cdn.com/content/v1/653a8dd17f416a664699d1d1/0fb98be2-d698-464e-ad2b-d4150e630b6b/TrakiNegro.png",
+    "membership_level": 2,
+    "info": "Large department store, known for offering a wide variety of products at affordable prices."
+  },
+  {
+    "name": "Corporación Eléctrica Nacional (CORPOELEC)",
+    "address": "Avenida 11 de Julio, Puerto Ordaz, Bolívar State, Venezuela",
+    "phone": "+58 286 923 2345",
+    "website": "https://pagos.corpoelec.com.ve/login",
+    "image": "https://images.seeklogo.com/logo-png/23/2/corpoelec-logo-png_seeklogo-233155.png",
+    "membership_level": 2,
+    "info": "State-owned company responsible for the electricity service nationwide, including the Guayana region."
+  },
+  {
+    "name": "Hotel Eurobuilding Plaza Guayana",
+    "address": "Avenida Paseo Caroní, Torre Eurobuilding, Puerto Ordaz, Bolívar State, Venezuela",
+    "phone": "+58 286 923 5447",
+    "website": "https://www.hoteleuro.com/en/hotel/guayana",
+    "image": "https://img.plasmic.app/img-optimizer/v1/img?src=https%3A%2F%2Fimg.plasmic.app%2Fimg-optimizer%2Fv1%2Fimg%2F93ad09bead8da269193487460fea6e8b.png&q=75&f=webp",
+    "membership_level": 3,
+    "info": "A leading hotel in the city, part of a renowned international chain."
+  },
+  {
+    "name": "Clínica Unare",
+    "address": "Avenida Guayana, Calle 4, Unare, Puerto Ordaz, Bolívar State, Venezuela",
+    "phone": "+58 286 951 7777",
+    "website": "https://www.instagram.com/institutoclinicounare/",
+    "image": "https://primicia.com.ve/wp-content/uploads/2020/07/Cl%C3%ADnica-Unare-1.jpg",
+    "membership_level": 2,
+    "info": "Private health center with a wide range of medical services, located in a strategic area of the city."
+  },
+  {
+    "name": "Orinokia Mall",
+    "address": "Avenida Las Américas, Puerto Ordaz, Bolívar State, Venezuela",
+    "phone": "+58 286 924 5678",
+    "website": "https://orinokiamall.com/",
+    "image": "https://orinokiamall.com/wp-content/uploads/2022/10/ORINOKIA-negro.png",
+    "membership_level": 3,
+    "info": "One of the largest and most modern shopping malls in the region, with a wide variety of shops and entertainment."
+  },
+  {
+    "name": "Farmatodo",
+    "address": "Av. Las Américas, Puerto Ordaz, Bolívar State, Venezuela (Alta Vista Branch)",
+    "phone": "+58 286 962 5000",
+    "website": "https://www.farmatodo.com.ve/",
+    "image": "https://www.farmatodo.com.ve/assets/svg/logo-farmatodo-blue.svg",
+    "membership_level": 3,
+    "info": "One of the largest pharmacy chains in the country, with multiple branches in Guayana City."
+  },
+  {
+    "name": "Siderúrgica del Orinoco (SIDOR)",
+    "address": "Zona Industrial Matanzas, Puerto Ordaz, Bolívar State, Venezuela",
+    "phone": "+58 286 990 0000",
+    "website": "https://www.sidor.com",
+    "image": "https://www.cvg.gob.ve/sites/default/files/images/CVG_SIDOR.png",
+    "membership_level": 3,
+    "info": "Venezuela's main steel complex and one of the largest in Latin America."
+  }
+]

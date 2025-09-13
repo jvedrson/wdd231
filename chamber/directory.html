@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ederson Villalba">
+    <meta name="description"
+        content="Chamber of Commerce Directory for Guayana, Venezuela. Discover local businesses, events, and networking opportunities.">
+    <title>Guayana Chamber Directory</title>
+    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="Guayana Chamber Directory">
+    <meta property="og:description"
+        content="Discover local businesses, events, and networking opportunities in Guayana.">
+    <meta property="og:image" content="images/favicon.ico">
+    <meta property="og:url" content="https://jvedrson.github.io/chamber/directory.html">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="../scripts/dates.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/favicon.ico" alt="Chamber Logo" width="40" height="40">
+            <h1>Guayana Chamber of Commerce</h1>
+        </div>
+        <button id="ham-btn" class="hamburger" aria-label="Open Close Navbar"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="current"><a href="directory.html">Directory</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="directory-header">
+            <h2>Business Directory</h2>
+            <p class="site-purpose">
+                Discover and connect with local businesses, services, and opportunities in Guayana City.
+            </p>
+            <div class="toggle">
+                <button id="gridBtn" class="active" aria-label="Grid View">Grid</button>
+                <button id="listBtn" aria-label="List View">List</button>
+            </div>
+        </section>
+
+        <section id="members" aria-live="polite">
+            <!-- Cards generados por JS -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-left">
+                <p>Guayana Chamber of Commerce</p>
+                <p>123 Main St, Guayana, Venezuela</p>
+                <p><a href="mailto:chamber@guayana.com">chamber@guayana.com</a></p>
+                <p>Mon-Fri,  9am - 5pm</p>
+                <p>+58 286-1234567</p>
+            </div>
+            <div class="footer-center">
+                <a href="https://github.com/jvedrson" target="_blank"><img src="../images/github.svg"
+                        alt="Github repository" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/edersonvillalba/" target="_blank"><img src="../images/linkedin.svg"
+                        alt="LinkedIn profile" width="32" height="32"></a>
+                <a href="https://wa.me/qr/324MXVBMZDJXK1" target="_blank"><img src="../images/whatsapp.svg"
+                        alt="Contact me" width="32" height="32"></a>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 - Web Development I</p>
+                <p>Ederson Villalba</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+                <p>&copy; <span id="currentyear"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
