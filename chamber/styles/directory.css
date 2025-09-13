@@ -5,6 +5,12 @@ body {
     color: #222;
 }
 
+.directory-header .title {
+    color: #004466;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
 header {
     display: flex;
     justify-content: space-between;
