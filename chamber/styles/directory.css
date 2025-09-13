@@ -109,18 +109,6 @@ nav.navigation a:hover {
     background-size: cover;
 }
 
-.hamburger::before {
-    content: "\2630";
-}
-
-.hamburger.show::before {
-    content: "\00D7";
-}
-
-main {
-    padding: 2rem 1rem;
-}
-
 .toggle {
     display: flex;
     justify-content: flex-end;
@@ -129,7 +117,7 @@ main {
 }
 
 .toggle button {
-    background: #1976d2;
+    background: #005580;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -140,8 +128,8 @@ main {
 
 .toggle button.active {
     background: #fff;
-    color: #1976d2;
-    border: 2px solid #1976d2;
+    color: #005580;
+    border: 2px solid #005580;
 }
 
 #members {
@@ -163,7 +151,7 @@ main {
     box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
     padding: 1.5rem 1rem 1rem 1rem;
     text-align: center;
-    border: 2px solid #b3e5fc;
+    border: 2px solid #004466ab;
     transition: box-shadow 0.2s;
     margin-bottom: 1rem;
 }
@@ -177,12 +165,6 @@ main {
     background: #e3f2fd;
 }
 
-.member-card h2 {
-    margin: 0.5rem 0 0.75rem 0;
-    color: #1976d2;
-    font-weight: 600;
-}
-
 .member-card p {
     margin: 0.25rem 0;
     font-size: 1rem;
@@ -190,7 +172,7 @@ main {
 }
 
 .member-card a {
-    color: #1976d2;
+    color: #005580;
     text-decoration: underline;
     font-size: 0.95rem;
 }
