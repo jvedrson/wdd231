@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+header,
+footer {
+    background: #82d219;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
+    padding: 1.5rem 1rem 1rem 1rem;
+    text-align: center;
+    border: 2px solid #bffcb3;
+    transition: box-shadow 0.2s;
+}
+
+section:hover {
+    box-shadow: 0 8px 24px rgba(47, 210, 25, 0.18);
+    border-color: #82d219;
+}
+
+h2 {
+    margin: 0.5rem 0 0.75rem 0;
+    font-size: 1.3rem;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+img {
+    border-radius: 8px;
+    margin-top: 0.75rem;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+    background: #e3f2fd;
+}
+
+p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.socials a img {
+    height: 48px;
+    margin: 0 1rem;
+    background: none;
+}
+
+.dates {
+    margin: 1.5rem 0;
+}
+.dates p {
+    color: #fff;
+    font-weight: 500;
+}

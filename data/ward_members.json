@@ -1,0 +1,53 @@
+[
+    {
+        "familyName": "Smith",
+        "dateMovedIn": "2023-06-15",
+        "numberOfPeople": 4,
+        "visitedByBishopric": true,
+        "members": [
+            {
+                "name": "John Smith",
+                "gender": "Male",
+                "birthdate": "1980-02-10"
+            },
+            {
+                "name": "Jane Smith",
+                "gender": "Female",
+                "birthdate": "1982-07-22"
+            },
+            {
+                "name": "Emily Smith",
+                "gender": "Female",
+                "birthdate": "2010-11-05"
+            },
+            {
+                "name": "Michael Smith",
+                "gender": "Male",
+                "birthdate": "2013-03-18"
+            }
+        ]
+    },
+    {
+        "familyName": "Garcia",
+        "dateMovedIn": "2024-01-10",
+        "numberOfPeople": 3,
+        "visitedByBishopric": false,
+        "members": [
+            {
+                "name": "Carlos Garcia",
+                "gender": "Male",
+                "birthdate": "1975-09-30"
+            },
+            {
+                "name": "Maria Garcia",
+                "gender": "Female",
+                "birthdate": "1978-05-14"
+            },
+            {
+                "name": "Sofia Garcia",
+                "gender": "Female",
+                "birthdate": "2005-12-01"
+            }
+        ]
+    }
+]
