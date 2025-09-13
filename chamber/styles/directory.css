@@ -26,16 +26,11 @@ header .logo {
     gap: 10px;
 }
 
-header .logo img {
+.header .logo img {
     width: 40px;
     height: 40px;
     margin-left: 10px;
     color: #000;
-}
-
-header .logo span {
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 /* Navigation */
@@ -205,9 +200,29 @@ footer {
     font-size: 16px;
 }
 
+
 .footer-left {
     text-align: left;
 }
+
+main {
+    min-height: 600px;
+}
+
+#members {
+    min-height: 400px;
+}
+
+.footer-flex {
+    min-height: 120px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    min-width: 180px;
+}
+
 
 .footer-left p a {
     color: #fff;
@@ -223,10 +238,13 @@ footer {
     display: inline-block;
 }
 
+
 .footer-center img {
     vertical-align: middle;
     filter: brightness(0) invert(1);
     transition: filter 0.2s;
+    width: 32px;
+    height: 32px;
 }
 
 .footer-center a:hover img {
