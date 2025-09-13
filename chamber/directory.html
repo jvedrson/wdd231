@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="preload" href="../styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="styles/directory.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -37,7 +37,10 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/bank.svg" alt="Chamber Logo" width="40" height="40">
+            <picture>
+                <source srcset="images/bank.webp" type="image/webp">
+                <img src="images/bank.svg" alt="Chamber Logo" width="40" height="40" style="width:40px;height:40px;">
+            </picture>
             <span>Guayana Chamber of Commerce</span>
         </div>
         <button id="ham-btn" class="hamburger" aria-label="Open Close Navbar"></button>
@@ -63,29 +66,29 @@
             </div>
         </section>
 
-        <section id="members" aria-live="polite">
+        <section id="members" aria-live="polite" style="min-height:400px;">
             <!-- Cards generados por JS -->
         </section>
     </main>
 
     <footer>
-        <div class="footer-flex">
-            <div class="footer-left">
+        <div class="footer-flex" style="min-height:120px;">
+            <div class="footer-left" style="min-width:180px;">
                 <p>Guayana Chamber of Commerce</p>
                 <p>123 Main St, Guayana, Venezuela</p>
                 <p>chamber@guayana.com</p>
                 <p>Mon-Fri, 9am - 5pm</p>
                 <p>+58 286-1234567</p>
             </div>
-            <div class="footer-center">
+            <div class="footer-center" style="min-width:180px;">
                 <a href="https://github.com/jvedrson" target="_blank"><img src="../images/github.svg"
-                        alt="Github repository" width="32" height="32"></a>
+                        alt="Github repository" width="32" height="32" style="width:32px;height:32px;"></a>
                 <a href="https://www.linkedin.com/in/edersonvillalba/" target="_blank"><img src="../images/linkedin.svg"
-                        alt="LinkedIn profile" width="32" height="32"></a>
+                        alt="LinkedIn profile" width="32" height="32" style="width:32px;height:32px;"></a>
                 <a href="https://wa.me/qr/324MXVBMZDJXK1" target="_blank"><img src="../images/whatsapp.svg"
-                        alt="Contact me" width="32" height="32"></a>
+                        alt="Contact me" width="32" height="32" style="width:32px;height:32px;"></a>
             </div>
-            <div class="footer-right">
+            <div class="footer-right" style="min-width:180px;">
                 <p>WDD231 - Web Development I</p>
                 <p>Ederson Villalba</p>
                 <p>Last Modification: &copy; <span id="currentyear"></span> <span id="lastModified"></span></p>
