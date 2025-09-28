@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ederson Villalba">
     <meta name="description"
-        content="Chamber of Commerce Directory for Guayana, Venezuela. Discover local businesses, events, and networking opportunities.">
-    <title>Guayana Chamber Directory</title>
+        content="Guayana Chamber of Commerce. Connect, join, and discover local business opportunities, events, and weather updates.">
+    <title>Guayana Chamber of Commerce</title>
     <link rel="icon" href="images/favicon.ico">
-    <meta property="og:title" content="Guayana Chamber Directory">
+    <meta property="og:title" content="Guayana Chamber of Commerce">
     <meta property="og:description"
-        content="Discover local businesses, events, and networking opportunities in Guayana.">
+        content="Connect, join, and discover local business opportunities, events, and weather updates in Guayana.">
     <meta property="og:image" content="https://camaradecomerciobolivar.org/wp-content/uploads/2023/08/512.webp">
-    <meta property="og:url" content="https://jvedrson.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://jvedrson.github.io/wdd231/chamber/index.html">
     <!-- Google Fonts Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +24,16 @@
     <link rel="preload" href="styles/directory.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="../styles/normalize.css">
         <link rel="stylesheet" href="../styles/base.css">
         <link rel="stylesheet" href="styles/directory.css">
         <link rel="stylesheet" href="styles/small.css">
         <link rel="stylesheet" href="styles/larger.css">
+        <link rel="stylesheet" href="styles/home.css">
     </noscript>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
     <script src="../scripts/dates.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
 </head>
@@ -49,28 +51,48 @@
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li class="current"><a href="./directory.html">Directory</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#join">Join</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <section class="directory-header">
-            <h1 class="title">Business Directory</h1>
-            <p class="site-purpose">
-                Discover and connect with local businesses, services, and opportunities in Guayana City.
-            </p>
-            <div class="toggle">
-                <button id="gridBtn" class="active" aria-label="Grid View">Grid</button>
-                <button id="listBtn" aria-label="List View">List</button>
+        <section class="hero">
+            <img src="images/orinoco_river.webp" alt="Guayana City" class="hero-img" width="100%" height="auto"
+                fetchpriority="high">
+            <div class="hero-text">
+                <h1>Welcome to Guayana Chamber of Commerce</h1>
+                <p>Empowering local businesses and fostering community growth.</p>
+                <a href="#join" class="btn-join">Join the Chamber</a>
             </div>
         </section>
 
-        <section id="members" aria-live="polite"></section>
-    </main>
+        <section id="events" class="info-panels">
+            <div class="panel">
+                <h2>Events</h2>
+                <ul>
+                    <li>Business Networking Night - Oct 10, 2025</li>
+                    <li>Local Market Fair - Oct 15, 2025</li>
+                    <li>Entrepreneur Workshop - Oct 20, 2025</li>
+                </ul>
+            </div>
+            <div class="panel weather">
+                <h2>Current Weather</h2>
+                <div id="weather-current"></div>
+            </div>
+            <div class="panel weather">
+                <h2>Weather Forecast</h2>
+                <div id="weather-forecast"></div>
+            </div>
+        </section>
 
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-cards"></div>
+        </section>
+    </main>
     <footer>
         <div class="footer-flex">
             <div class="footer-left">
