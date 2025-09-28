@@ -177,7 +177,7 @@ footer {
     text-align: center;
     color: #fff;
     padding: 1rem 0;
-    border-radius: 8px 8px 0 0;
+    min-height: 120px;
 }
 
 .footer-flex {
@@ -198,6 +198,12 @@ footer {
     text-align: center;
     padding: 1rem;
     font-size: 16px;
+}
+
+.footer-center a img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 

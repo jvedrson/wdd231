@@ -124,6 +124,15 @@
     margin-bottom: 1rem;
 }
 
+.member-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background: #e3f2fd;
+}
+
 @media (max-width: 700px) {
     .hero {
         max-width: 100%;

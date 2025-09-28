@@ -45,6 +45,9 @@ header .logo {
 
 header .logo img {
     width: 48px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    margin-left: 5px;
 }
 
 header .logo span {
