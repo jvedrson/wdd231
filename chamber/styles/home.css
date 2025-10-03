@@ -25,6 +25,14 @@
     min-height: 220px;
 }
 
+#weather-current {
+    min-height: 150px;
+}
+
+#weather-forecast {
+    min-height: 120px;
+}
+
 .weather-loading,
 .spotlight-loading {
     display: flex;
@@ -140,6 +148,7 @@
     justify-content: center;
     width: 100%;
     margin: 0 auto;
+    min-height: 320px;
 }
 
 .spotlight-card {
@@ -160,6 +169,17 @@
     border-radius: 8px;
     margin-bottom: 0.5rem;
     background: #e3f2fd;
+}
+
+.text-line-medium {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.text-line {
+    margin: 0.5rem 0;
+    line-height: 1.4;
 }
 
 @media (max-width: 700px) {

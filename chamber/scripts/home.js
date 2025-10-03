@@ -22,13 +22,13 @@ async function loadWeather() {
 
         document.getElementById('weather-current').innerHTML = `
             <div class="weather-summary">
-                <p style="font-size:1.3rem; margin: 0.5rem 0; line-height: 1.4;"><strong>${temp}°C</strong></p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;">${desc.charAt(0).toUpperCase() + desc.slice(1)}</p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;">High: <strong>${temp_max}°C</strong></p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;">Low: <strong>${temp_min}°C</strong></p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;">Humidity: <strong>${humidity}%</strong></p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;">Sunrise: <strong>${formatTime(sunrise)}</strong></p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;">Sunset: <strong>${formatTime(sunset)}</strong></p>
+                <p class="text-line-medium"><strong>${temp}°C</strong></p>
+                <p class="text-line">${desc.charAt(0).toUpperCase() + desc.slice(1)}</p>
+                <p class="text-line">High: <strong>${temp_max}°C</strong></p>
+                <p class="text-line">Low: <strong>${temp_min}°C</strong></p>
+                <p class="text-line">Humidity: <strong>${humidity}%</strong></p>
+                <p class="text-line">Sunrise: <strong>${formatTime(sunrise)}</strong></p>
+                <p class="text-line">Sunset: <strong>${formatTime(sunset)}</strong></p>
             </div>
         `;
 
@@ -46,8 +46,8 @@ async function loadWeather() {
             .map((day) => {
                 const date = new Date(day.dt_txt);
                 return `<div class="forecast-day">
-                	<p style="margin: 0.5rem 0; line-height: 1.4;"><strong>${date.toLocaleDateString(undefined, dateOptions)}</strong></p>
-                	<p style="margin: 0.5rem 0; line-height: 1.4;">${Math.round(day.main.temp)}°C, ${day.weather[0].description}</p>
+                	<p class="text-line"><strong>${date.toLocaleDateString(undefined, dateOptions)}</strong></p>
+                	<p class="text-line">${Math.round(day.main.temp)}°C, ${day.weather[0].description}</p>
             	</div>`;
             })
             .join('');
@@ -79,13 +79,13 @@ async function loadSpotlightsMembers() {
 
                 return `<div class="spotlight-card">
                 <img src="${member.image}" alt="${member.name} logo" class="member-logo" width="120" height="120" loading="lazy">
-                <h2 style="margin: 0.5rem 0; line-height: 1.4;">${member.name}</h2>
-                <p style="margin: 0.5rem 0; line-height: 1.4;"><strong>Address:</strong> ${member.address}</p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;"><strong>Phone:</strong> ${member.phone}</p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;"><strong>Website:</strong> <a href="${member.website}" target="_blank">Link</a></p>
-                <p style="margin: 0.5rem 0; line-height: 1.4;"><strong>Membership:</strong> ${membershipLevel(member.membership_level)}</p>
+                <h2 class="text-line">${member.name}</h2>
+                <p class="text-line"><strong>Address:</strong> ${member.address}</p>
+                <p class="text-line"><strong>Phone:</strong> ${member.phone}</p>
+                <p class="text-line"><strong>Website:</strong> <a href="${member.website}" target="_blank">Link</a></p>
+                <p class="text-line"><strong>Membership:</strong> ${membershipLevel(member.membership_level)}</p>
                 <br />
-                <p style="margin: 0.5rem 0; line-height: 1.4;">${member.info}</p>
+                <p class="text-line">${member.info}</p>
             </div>`;
             })
             .join("");
