@@ -2,37 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Ederson Villalba">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ederson Villalba" />
     <meta name="description"
-        content="Guayana Chamber of Commerce. Connect, join, and discover local business opportunities, events, and weather updates.">
+        content="Guayana Chamber of Commerce. Connect, join, and discover local business opportunities, events, and weather updates." />
     <title>Guayana Chamber of Commerce</title>
-    <link rel="icon" href="images/favicon.ico">
-    <meta property="og:title" content="Guayana Chamber of Commerce">
+    <link rel="icon" href="images/favicon.ico" />
+    <meta property="og:title" content="Guayana Chamber of Commerce" />
     <meta property="og:description"
-        content="Connect, join, and discover local business opportunities, events, and weather updates in Guayana.">
-    <meta property="og:image" content="https://camaradecomerciobolivar.org/wp-content/uploads/2023/08/512.webp">
-    <meta property="og:url" content="https://jvedrson.github.io/wdd231/chamber/index.html">
+        content="Connect, join, and discover local business opportunities, events, and weather updates in Guayana." />
+    <meta property="og:image" content="https://camaradecomerciobolivar.org/wp-content/uploads/2023/08/512.webp" />
+    <meta property="og:url" content="https://jvedrson.github.io/wdd231/chamber/index.html" />
     <!-- Google Fonts Optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="preload" href="../styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="styles/directory.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="styles/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="../styles/normalize.css">
-        <link rel="stylesheet" href="../styles/base.css">
-        <link rel="stylesheet" href="styles/directory.css">
-        <link rel="stylesheet" href="styles/small.css">
-        <link rel="stylesheet" href="styles/larger.css">
-        <link rel="stylesheet" href="styles/home.css">
-    </noscript>
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/home.css" />
     <script src="scripts/home.js" defer></script>
     <script src="../scripts/dates.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
@@ -42,8 +34,8 @@
     <header>
         <div class="logo">
             <picture>
-                <source srcset="images/bank.webp" type="image/webp">
-                <img src="images/bank.svg" alt="Chamber Logo" width="40" height="40">
+                <source srcset="images/bank.webp" type="image/webp" />
+                <img src="images/bank.svg" alt="Chamber Logo" width="40" height="40" />
             </picture>
             <span>Guayana Chamber of Commerce</span>
         </div>
@@ -60,8 +52,8 @@
     </nav>
     <main>
         <section class="hero">
-            <img src="images/orinoco_river.webp" alt="Guayana City" class="hero-img" width="100%" height="auto"
-                fetchpriority="high">
+            <img src="images/orinoco_river.webp" alt="Guayana City" class="hero-img" width="900" height="400"
+                fetchpriority="high" />
             <div class="hero-text">
                 <h1>Welcome to Guayana Chamber of Commerce</h1>
                 <p>Empowering local businesses and fostering community growth.</p>
@@ -80,17 +72,23 @@
             </div>
             <div class="panel weather">
                 <h2>Current Weather</h2>
-                <div id="weather-current"></div>
+                <div id="weather-current" style="min-height: 150px;">
+                    <div class="weather-loading">Loading weather data...</div>
+                </div>
             </div>
             <div class="panel weather">
                 <h2>Weather Forecast</h2>
-                <div id="weather-forecast"></div>
+                <div id="weather-forecast" style="min-height: 120px;">
+                    <div class="weather-loading">Loading forecast...</div>
+                </div>
             </div>
         </section>
 
         <section class="spotlights">
             <h2>Member Spotlights</h2>
-            <div id="spotlight-cards"></div>
+            <div id="spotlight-cards" style="min-height: 320px;">
+                <div class="spotlight-loading">Loading member spotlights...</div>
+            </div>
         </section>
     </main>
     <footer>
@@ -104,11 +102,11 @@
             </div>
             <div class="footer-center">
                 <a href="https://github.com/jvedrson" target="_blank"><img src="../images/github.svg"
-                        alt="Github repository" width="32" height="32"></a>
+                        alt="Github repository" width="32" height="32" /></a>
                 <a href="https://www.linkedin.com/in/edersonvillalba/" target="_blank"><img src="../images/linkedin.svg"
-                        alt="LinkedIn profile" width="32" height="32"></a>
+                        alt="LinkedIn profile" width="32" height="32" /></a>
                 <a href="https://wa.me/qr/324MXVBMZDJXK1" target="_blank"><img src="../images/whatsapp.svg"
-                        alt="Contact me" width="32" height="32"></a>
+                        alt="Contact me" width="32" height="32" /></a>
             </div>
             <div class="footer-right">
                 <p>WDD231 - Web Development I</p>
