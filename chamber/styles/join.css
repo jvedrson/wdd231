@@ -1,0 +1,242 @@
+.join-header {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+
+.join-header .title {
+    color: #004466;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.join-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+/* Form Styles */
+.membership-form {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    border: 2px solid #004466;
+}
+
+.membership-form h2 {
+    color: #004466;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.membership-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.membership-form input,
+.membership-form select,
+.membership-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.membership-form input:focus,
+.membership-form select:focus,
+.membership-form textarea:focus {
+    outline: none;
+    border-color: #004466;
+    box-shadow: 0 0 0 3px rgba(0, 68, 102, 0.1);
+}
+
+.membership-form input:invalid {
+    border-color: #dc3545;
+}
+
+.membership-form input:valid {
+    border-color: #28a745;
+}
+
+.submit-btn {
+    background: #004466;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #005580;
+}
+
+/* Membership Level Cards */
+.membership-levels {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    border: 2px solid #004466;
+}
+
+.membership-levels h2 {
+    color: #004466;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.level-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.level-card {
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: slideInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.level-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.level-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.level-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.level-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 68, 102, 0.15);
+    border-color: #004466;
+}
+
+.level-card h3 {
+    color: #004466;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.level-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0077b6;
+    margin-bottom: 0.5rem;
+}
+
+.level-card p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.benefits-link {
+    display: inline-block;
+    background: #004466;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.benefits-link:hover {
+    background: #005580;
+}
+
+/* Modal Styles */
+dialog {
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+dialog h3 {
+    color: #004466;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+dialog ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+dialog li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #004466;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-modal:hover {
+    background: #c82333;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

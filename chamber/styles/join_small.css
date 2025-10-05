@@ -1,0 +1,50 @@
+@media (min-width: 768px) {
+    .join-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .membership-form {
+        order: 1;
+    }
+
+    .membership-levels {
+        order: 2;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .join-header,
+    .thankyou-header {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .join-content {
+        margin: 1rem;
+        padding: 0;
+    }
+
+    .membership-form,
+    .membership-levels,
+    .application-summary {
+        padding: 1.5rem;
+    }
+
+    .level-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}

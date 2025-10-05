@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ederson Villalba">
+    <meta name="description"
+        content="Join the Guayana Chamber of Commerce. Apply for membership and discover the benefits of being part of our business community.">
+    <title>Join the Chamber - Guayana Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <meta property="og:title" content="Join the Chamber - Guayana Chamber of Commerce">
+    <meta property="og:description"
+        content="Apply for membership and discover the benefits of being part of our business community in Guayana.">
+    <meta property="og:image" content="https://camaradecomerciobolivar.org/wp-content/uploads/2023/08/512.webp">
+    <meta property="og:url" content="https://jvedrson.github.io/wdd231/chamber/join.html">
+    <!-- Google Fonts Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/join.css" />
+    <link rel="stylesheet" href="styles/join_small.css" />
+    <script type="module" src="scripts/join.js" defer></script>
+    <script src="../scripts/dates.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <picture>
+                <source srcset="images/bank.webp" type="image/webp" />
+                <img src="images/bank.svg" alt="Chamber Logo" width="40" height="40" />
+            </picture>
+            <span>Guayana Chamber of Commerce</span>
+        </div>
+        <button id="ham-btn" class="hamburger" aria-label="Open Close Navbar"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#events">Events</a></li>
+            <li class="current"><a href="join.html">Join</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="join-header">
+            <h1 class="title">Join the Chamber</h1>
+            <p class="site-purpose">
+                Become a member of the Guayana Chamber of Commerce and unlock
+                opportunities for your business growth and community impact.
+            </p>
+        </section>
+
+        <div class="join-content">
+            <form class="membership-form" method="get" action="thankyou.html">
+                <h2>Membership Application</h2>
+
+                <label for="firstName">
+                    First Name *
+                    <input type="text" id="firstName" name="firstName" title="Enter your first name"
+                        autocomplete="given-name" required />
+                </label>
+
+                <label for="lastName">
+                    Last Name *
+                    <input type="text" id="lastName" name="lastName" title="Enter your last name"
+                        autocomplete="family-name" required />
+                </label>
+
+                <label for="title">
+                    Organizational Title
+                    <input type="text" id="title" name="title" title="Enter your job title"
+                        autocomplete="organization-title" pattern="[a-zA-Z\s\-]{7,}"
+                        placeholder="e.g., Chief Executive Officer" />
+                </label>
+
+                <label for="email">
+                    Email Address *
+                    <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email"
+                        placeholder="example@company.com" required />
+                </label>
+
+                <label for="phone">
+                    Mobile Phone Number *
+                    <input type="tel" id="phone" name="phone" title="Enter your phone number" autocomplete="tel"
+                        required />
+                </label>
+
+                <label for="businessName">
+                    Business/Organization Name *
+                    <input type="text" id="businessName" name="businessName" title="Enter your business name"
+                        autocomplete="organization" required />
+                </label>
+
+                <label for="membershipLevel">
+                    Membership Level *
+                    <select id="membershipLevel" name="membershipLevel" title="Select membership level" required>
+                        <option value="">Choose a membership level</option>
+                    </select>
+                </label>
+
+                <label for="description">
+                    Business Description
+                    <textarea id="description" name="description" title="Describe your business" rows="4"
+                        placeholder="Tell us about your business, services, or organization..."></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp" />
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+
+            <div class="membership-levels">
+                <h2>Membership Benefits</h2>
+                <div class="level-cards" id="levelCards"></div>
+            </div>
+        </div>
+
+        <!-- Modals for membership benefits -->
+        <div id="dialogsContainer"></div>
+    </main>
+
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-left">
+                <p>Guayana Chamber of Commerce</p>
+                <p>123 Main St, Guayana, Venezuela</p>
+                <p>chamber@guayana.com</p>
+                <p>Mon-Fri, 9am - 5pm</p>
+                <p>+58 286-1234567</p>
+            </div>
+            <div class="footer-center">
+                <a href="https://github.com/jvedrson" target="_blank"><img src="../images/github.svg"
+                        alt="Github repository" width="32" height="32" /></a>
+                <a href="https://www.linkedin.com/in/edersonvillalba/" target="_blank"><img src="../images/linkedin.svg"
+                        alt="LinkedIn profile" width="32" height="32" /></a>
+                <a href="https://wa.me/qr/324MXVBMZDJXK1" target="_blank"><img src="../images/whatsapp.svg"
+                        alt="Contact me" width="32" height="32" /></a>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 - Web Development I</p>
+                <p>Ederson Villalba</p>
+                <p>
+                    Last Modification: &copy; <span id="currentyear"></span>
+                    <span id="lastModified"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

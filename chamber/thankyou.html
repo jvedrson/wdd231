@@ -6,32 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ederson Villalba">
     <meta name="description"
-        content="Chamber of Commerce Directory for Guayana, Venezuela. Discover local businesses, events, and networking opportunities.">
-    <title>Guayana Chamber Directory</title>
+        content="Thank you for joining the Guayana Chamber of Commerce. Your application has been received and will be processed soon.">
+    <title>Thank You - Guayana Chamber of Commerce</title>
     <link rel="icon" href="images/favicon.ico" />
-    <meta property="og:title" content="Guayana Chamber Directory">
+    <meta property="og:title" content="Thank You - Guayana Chamber of Commerce">
     <meta property="og:description"
-        content="Discover local businesses, events, and networking opportunities in Guayana.">
+        content="Thank you for joining the Guayana Chamber of Commerce. Your application has been received.">
     <meta property="og:image" content="https://camaradecomerciobolivar.org/wp-content/uploads/2023/08/512.webp">
-    <meta property="og:url" content="https://jvedrson.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://jvedrson.github.io/wdd231/chamber/thankyou.html">
     <!-- Google Fonts Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'" />
-    <link rel="preload" href="../styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="preload" href="../styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="preload" href="styles/directory.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-        <link rel="stylesheet" href="../styles/normalize.css" />
-        <link rel="stylesheet" href="../styles/base.css" />
-        <link rel="stylesheet" href="styles/directory.css" />
-        <link rel="stylesheet" href="styles/small.css" />
-        <link rel="stylesheet" href="styles/larger.css" />
-    </noscript>
-    <script src="scripts/directory.js" defer></script>
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/thankyou.css" />
+    <script src="scripts/thankyou.js" defer></script>
     <script src="../scripts/dates.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
 </head>
@@ -49,29 +43,45 @@
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li class="current"><a href="./directory.html">Directory</a></li>
-            <li><a href="#">Events</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#events">Events</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <section class="directory-header">
-            <h1 class="title">Business Directory</h1>
+        <section class="thankyou-header">
+            <h1 class="title">Thank You!</h1>
             <p class="site-purpose">
-                Discover and connect with local businesses, services, and
-                opportunities in Guayana City.
+                Your membership application has been received. We'll review your
+                information and contact you within 2-3 business days.
             </p>
-            <div class="toggle">
-                <button id="gridBtn" class="active" aria-label="Grid View">
-                    Grid
-                </button>
-                <button id="listBtn" aria-label="List View">List</button>
-            </div>
         </section>
 
-        <section id="members" aria-live="polite"></section>
+        <section class="application-summary">
+            <h2>Application Summary</h2>
+            <div id="application-details" class="application-details">
+                <!-- Application details will be populated by JavaScript -->
+            </div>
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <ul>
+                    <li>We'll review your application within 2-3 business days</li>
+                    <li>
+                        You'll receive a confirmation email with your membership details
+                    </li>
+                    <li>Once approved, you'll get access to all member benefits</li>
+                    <li>
+                        Our team will contact you to complete the membership process
+                    </li>
+                </ul>
+            </div>
+            <div class="action-buttons">
+                <a href="index.html" class="btn-primary">Return to Home</a>
+                <a href="directory.html" class="btn-secondary">View Directory</a>
+            </div>
+        </section>
     </main>
 
     <footer>

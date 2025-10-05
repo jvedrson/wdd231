@@ -1,0 +1,111 @@
+/* Thank You Page Styles */
+.thankyou-header {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+
+.thankyou-header .title {
+    color: #004466;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.application-summary {
+    margin: 2rem auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    border: 2px solid #004466;
+}
+
+.application-summary h2 {
+    color: #004466;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.application-details {
+    background: #f9f9f9;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+}
+
+.detail-item {
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.next-steps {
+    margin-bottom: 2rem;
+}
+
+.next-steps h3 {
+    color: #004466;
+    margin-bottom: 1rem;
+}
+
+.next-steps ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.next-steps li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 150px;
+}
+
+.btn-primary {
+    background: #004466;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #005580;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #004466;
+    border: 2px solid #004466;
+}
+
+.btn-secondary:hover {
+    background: #004466;
+    color: #fff;
+    transform: translateY(-2px);
+}
