@@ -137,22 +137,21 @@ document.addEventListener("DOMContentLoaded", function () {
             const value = input.value.trim();
             const isRequired = input.hasAttribute("required");
             const isEmail = input.type === "email";
+            const isTitle = input.id === "title";
 
-
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const titlePattern = /^[a-zA-Z\s\-]{7,}$/;
 
             if (isRequired && value === "") {
                 input.style.borderColor = colorError;
             } else if (isEmail && value !== "") {
-                const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-                if (emailPattern.test(value)) {
-                    input.style.borderColor = colorValid;
-                } else {
-                    input.style.borderColor = colorError;
-                }
+                input.style.borderColor = emailPattern.test(value) ? colorValid : colorError;
+            } else if (isTitle && value !== "") {
+                input.style.borderColor = titlePattern.test(value) ? colorValid : colorError;
             } else if (value !== "") {
                 input.style.borderColor = colorValid;
             } else {
-                input.style.borderColor = ""; // reset if not required
+                input.style.borderColor = "";
             }
         });
     });
