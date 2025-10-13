@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .color-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wireframe-container {
+    gap: 2rem;
+  }
+
+  .wireframe-image-wrapper {
+    padding: 1rem;
+  }
+
+  .mobile-wireframe-image {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .typography-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wireframe-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wireframe-item {
+    grid-column: span 1;
+  }
+}
