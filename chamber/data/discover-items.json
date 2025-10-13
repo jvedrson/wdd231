@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "La Llovizna Park",
+        "address": "Av. Leopoldo Sucre Figarella, Puerto Ordaz, Ciudad Guayana, Bolívar",
+        "description": "A beautiful natural park with waterfalls, jungle trails, and wildlife. Perfect for hiking, relaxing, and photography.",
+        "image": "images/discover/llovizna.webp"
+    },
+    {
+        "id": 2,
+        "name": "Cachamay Park",
+        "address": "Av. Guayana, Puerto Ordaz, Ciudad Guayana, Bolívar",
+        "description": "A lush park featuring waterfalls from the Caroní River, green spaces, and walking paths. A favorite spot for families and nature lovers.",
+        "image": "images/discover/cachamay.webp"
+    },
+    {
+        "id": 3,
+        "name": "Orinoco River",
+        "address": "Riverside zone, Ciudad Guayana, Bolívar",
+        "description": "One of South America's longest rivers. Offers scenic views, boat tours, and is vital for trade and biodiversity.",
+        "image": "images/discover/orinoco.webp"
+    },
+    {
+        "id": 4,
+        "name": "Macagua Dam",
+        "address": "Av. Guayana, Puerto Ordaz, Ciudad Guayana, Bolívar",
+        "description": "A hydroelectric dam located within the city. Combines impressive engineering with natural beauty.",
+        "image": "images/discover/macagua.webp"
+    },
+    {
+        "id": 5,
+        "name": "Alta Vista Commercial Zone",
+        "address": "Alta Vista, Puerto Ordaz, Ciudad Guayana, Bolívar",
+        "description": "A bustling district filled with shopping centers, restaurants, banks, and cultural spots. The heart of urban life in Puerto Ordaz.",
+        "image": "images/discover/altavista.webp"
+    },
+    {
+        "id": 6,
+        "name": "Cachamay Stadium",
+        "address": "Av. Guayana, Puerto Ordaz, Ciudad Guayana, Bolívar",
+        "description": "A modern sports complex hosting football matches, concerts, and events. Its design and location make it a city landmark.",
+        "image": "images/discover/cachamay-stadium.webp"
+    },
+    {
+        "id": 7,
+        "name": "Eurobuilding Hotel & Suites",
+        "address": "Alta Vista, Puerto Ordaz, Ciudad Guayana, Bolívar",
+        "description": "A luxury hotel offering premium accommodations, conference rooms, and fine dining. Popular among business travelers and tourists.",
+        "image": "images/discover/eurobuilding.webp"
+    },
+    {
+        "id": 8,
+        "name": "Orinokia Mall",
+        "address": "Av. Guayana, Puerto Ordaz, Ciudad Guayana, Bolívar",
+        "description": "The largest shopping mall in the city, featuring retail stores, restaurants, a cinema, and entertainment spaces.",
+        "image": "images/discover/orinokia.webp"
+    }
+]

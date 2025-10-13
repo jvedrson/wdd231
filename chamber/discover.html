@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ederson Villalba">
+    <meta name="description"
+        content="Discover Guayana - Explore attractions, landmarks, and points of interest in Guayana, Venezuela.">
+    <title>Discover Guayana - Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <meta property="og:title" content="Discover Guayana" >
+    <meta property="og:description" content="Explore attractions, landmarks, and points of interest in Guayana, Venezuela.">
+    <meta property="og:image" content="https://camaradecomerciobolivar.org/wp-content/uploads/2023/08/512.webp">
+    <meta property="og:url" content="https://jvedrson.github.io/wdd231/chamber/discover.html">
+    <!-- Google Fonts Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="styles/discover.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/small.css" media="(max-width: 640px)" />
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 641px)" />
+    <link rel="stylesheet" href="styles/discover_media.css" media="(min-width: 641px)" />
+    <script src="scripts/discover.js" defer></script>
+    <script src="../scripts/dates.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <picture>
+                <source srcset="images/bank.webp" type="image/webp" />
+                <img
+                    src="images/bank.svg"
+                    alt="Chamber Logo"
+                    width="40"
+                    height="40"
+                />
+            </picture>
+            <span>Guayana Chamber of Commerce</span>
+        </div>
+        <button
+            id="ham-btn"
+            class="hamburger"
+            aria-label="Open Close Navbar"
+        ></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="discover-header">
+            <h1>Discover Guayana</h1>
+            <p>
+                Explore the rich culture, landmarks, and attractions of our
+                beautiful region.
+            </p>
+        </section>
+
+        <div id="visit-message" class="visit-message"></div>
+
+        <section id="discover-cards" class="discover-grid"></section>
+    </main>
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-left">
+                <p>Guayana Chamber of Commerce</p>
+                <p>123 Main St, Guayana, Venezuela</p>
+                <p>chamber@guayana.com</p>
+                <p>Mon-Fri, 9am - 5pm</p>
+                <p>+58 286-1234567</p>
+            </div>
+            <div class="footer-center">
+                <a href="https://github.com/jvedrson" target="_blank"
+                    ><img
+                        src="../images/github.svg"
+                        alt="Github repository"
+                        width="32"
+                        height="32"
+                /></a>
+                <a
+                    href="https://www.linkedin.com/in/edersonvillalba/"
+                    target="_blank"
+                    ><img
+                        src="../images/linkedin.svg"
+                        alt="LinkedIn profile"
+                        width="32"
+                        height="32"
+                /></a>
+                <a href="https://wa.me/qr/324MXVBMZDJXK1" target="_blank"
+                    ><img
+                        src="../images/whatsapp.svg"
+                        alt="Contact me"
+                        width="32"
+                        height="32"
+                /></a>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 - Web Development I</p>
+                <p>Ederson Villalba</p>
+                <p>
+                    Last Modification: &copy; <span id="currentyear"></span>
+                    <span id="lastModified"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
