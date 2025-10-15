@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ederson Villalba - Backend Dev Toolbox" />
+  <meta name="description"
+    content="Browse our comprehensive collection of backend development tools including frameworks, databases, DevOps tools, and more." />
+  <meta property="og:title" content="Backend Development Tools - Resources Directory" />
+  <meta property="og:description"
+    content="Explore 20+ carefully curated backend development tools with detailed information and filtering options." />
+  <meta property="og:image" content="images/backend-toolbox-og.jpg" />
+  <meta property="og:url" content="https://jvedrson.github.io/wdd231/finalproject/resources.html" />
+  <meta property="og:type" content="website" />
+  <title>
+    Backend Development Tools - Resources Directory | Backend Dev Toolbox
+  </title>
+  <link rel="icon" href="images/favicon.ico" />
+
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Load Google Fonts with font-display=swap to prevent layout shifts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/resources.css" />
+  <link rel="stylesheet" href="styles/small.css" media="(max-width: 768px)" />
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 769px)" />
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/bdt-logo.webp" alt="Backend Dev Toolbox Logo" width="40" height="40" loading="lazy" />
+        <h1>Backend Dev Toolbox</h1>
+      </div>
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resources.html" class="current">Resources</a></li>
+        <li><a href="suggest.html">Suggest Tool</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Page Header -->
+      <section class="page-header">
+        <h1>Backend Development Tools</h1>
+        <p>
+          Discover and explore essential tools for backend development. Filter
+          by language, category, or search for specific tools.
+        </p>
+      </section>
+
+      <!-- Quick Stats -->
+      <section class="stats-section compact-stats">
+        <div id="stats-container" class="stats">
+          <!-- Stats will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Search and Filters -->
+      <section class="search-filters">
+        <div class="search-filter-bar">
+          <div class="search-group">
+            <label for="search-input" class="sr-only">Search tools</label>
+            <input type="text" id="search-input" class="search-input form-control"
+              placeholder="Search tools by name, description, or category..." />
+          </div>
+          <div class="filter-group">
+            <label for="language-filter">Language:</label>
+            <select id="language-filter" class="form-control">
+              <option value="">All Languages</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="category-filter">Category:</label>
+            <select id="category-filter" class="form-control">
+              <option value="">All Categories</option>
+            </select>
+          </div>
+          <div class="filter-actions">
+            <button id="clear-filters" class="btn btn-secondary">
+              Clear Filters
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Loading Indicator -->
+      <div id="loading" class="loading-container hidden">
+        <div class="loading"></div>
+        <p>Loading tools...</p>
+      </div>
+
+      <!-- Tools Container -->
+      <section class="tools-section">
+        <div id="tools-container" class="tools-grid">
+          <!-- Tools will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="no-results hidden">
+        <div class="card text-center">
+          <h3>No tools found</h3>
+          <p>Try adjusting your search criteria or browse all tools.</p>
+          <button id="show-all-tools" class="btn">Show All Tools</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="suggest.html">Suggest Tool</a>
+        <a href="attributions.html">Attributions</a>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="currentYear"></span> Backend Dev Toolbox - Ederson
+          Villalba
+        </p>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <p>
+          <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+            📹 Project Demo Video
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/resources.js" defer></script>
+</body>
+
+</html>

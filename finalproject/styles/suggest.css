@@ -1,0 +1,108 @@
+.tool-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-help {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--text-color);
+}
+
+.field-error {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-control.error {
+    border-color: var(--error-color);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Guidelines */
+.guidelines-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.guideline-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.guideline-item ul {
+    padding-left: 1.5rem;
+}
+
+.guideline-item li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Field validation styles */
+.field-invalid {
+    border-color: var(--error-color) !important;
+}
+
+.field-valid {
+    border-color: var(--success-color) !important;
+}
+
+/* Validation Modal */
+.validation-modal {
+    border: 2px solid var(--error-color);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    background: var(--white);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.validation-modal::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.validation-modal h3 {
+    color: var(--error-color);
+    margin-bottom: 1rem;
+}
+
+.validation-modal p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.validation-modal .btn {
+    min-width: 100px;
+}
+
+@media (max-width: 768px) {
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-layout {
+        grid-template-columns: 1fr;
+    }
+}

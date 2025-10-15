@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ederson Villalba - Backend Dev Toolbox">
+  <meta name="description"
+    content="Backend Dev Toolbox - A curated directory of essential backend development tools, frameworks, and resources for developers.">
+  <meta property="og:title" content="Backend Dev Toolbox - Essential Tools for Backend Developers">
+  <meta property="og:description"
+    content="Discover the best backend development tools, frameworks, databases, and DevOps resources in one place.">
+  <meta property="og:image" content="images/backend-toolbox-og.jpg">
+  <meta property="og:url" content="https://jvedrson.github.io/wdd231/finalproject/">
+  <meta property="og:type" content="website">
+  <title>Backend Dev Toolbox - Essential Tools for Backend Developers</title>
+  <link rel="icon" href="images/favicon.ico" />
+
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Load Google Fonts with font-display=swap to prevent layout shifts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/small.css" media="(max-width: 768px)" />
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 769px)" />
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/bdt-logo.webp" alt="Backend Dev Toolbox Logo" width="40" height="40" loading="lazy" />
+        <!-- Explicit width/height already set for logo image -->
+        <h1>Backend Dev Toolbox</h1>
+      </div>
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="current">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="suggest.html">Suggest Tool</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <h1>Backend Tools and Resources</h1>
+        <p>
+          Discover the most powerful and essential tools for backend
+          development. From frameworks and databases to DevOps and monitoring
+          solutions, find everything you need to build robust backend systems.
+        </p>
+        <div class="hero-actions">
+          <a href="resources.html" class="btn">Explore Tools</a>
+          <a href="suggest.html" class="btn btn-secondary">Suggest a Tool</a>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <h2>Toolbox Overview</h2>
+        <div id="stats-container" class="stats"></div>
+      </section>
+
+      <section class="featured-categories">
+        <h2>Popular Categories</h2>
+        <div class="categories-grid">
+          <div class="category-card card">
+            <h3>Frameworks</h3>
+            <p>Web frameworks for building APIs and backend services</p>
+            <a href="resources.html?category=Framework" class="btn btn-secondary">View Frameworks</a>
+          </div>
+          <div class="category-card card">
+            <h3>Databases</h3>
+            <p>Database systems for data storage and management</p>
+            <a href="resources.html?category=Database" class="btn btn-secondary">View Databases</a>
+          </div>
+          <div class="category-card card">
+            <h3>DevOps</h3>
+            <p>Tools for deployment, monitoring, and infrastructure</p>
+            <a href="resources.html?category=DevOps" class="btn btn-secondary">View DevOps</a>
+          </div>
+          <div class="category-card card">
+            <h3>Testing</h3>
+            <p>Testing frameworks and tools for quality assurance</p>
+            <a href="resources.html?category=Testing" class="btn btn-secondary">View Testing</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <h2>Why Use Backend Dev Toolbox?</h2>
+        <div class="features-grid">
+          <div class="feature-card card">
+            <h3>Curated Collection</h3>
+            <p>
+              Hand-picked tools that are actually used in production
+              environments by experienced developers.
+            </p>
+          </div>
+          <div class="feature-card card">
+            <h3>Detailed Information</h3>
+            <p>
+              Get comprehensive details about each tool including difficulty
+              level, license, and use cases.
+            </p>
+          </div>
+          <div class="feature-card card">
+            <h3>Easy Discovery</h3>
+            <p>
+              Filter by language, category, or search to quickly find the
+              tools you need for your project.
+            </p>
+          </div>
+          <div class="feature-card card">
+            <h3>Favorites System</h3>
+            <p>
+              Save your favorite tools for quick access and build your
+              personal toolkit.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-start">
+        <h2>Get Started</h2>
+        <div class="quick-start-content">
+          <div class="quick-start-text">
+            <h3>Ready to explore?</h3>
+            <p>
+              Browse our comprehensive collection of backend development
+              tools. Whether you're building APIs, managing databases, or
+              setting up infrastructure, we have the tools you need.
+            </p>
+            <ul>
+              <li>20+ carefully selected tools</li>
+              <li>Multiple programming languages</li>
+              <li>Various difficulty levels</li>
+              <li>Production-ready solutions</li>
+            </ul>
+          </div>
+          <div class="quick-start-actions">
+            <a href="resources.html" class="btn">Browse All Tools</a>
+            <a href="suggest.html" class="btn btn-secondary">Suggest a Tool</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="suggest.html">Suggest Tool</a>
+        <a href="attributions.html">Attributions</a>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="currentYear"></span> Backend Dev Toolbox - Ederson
+          Villalba
+        </p>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <p>
+          <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+            📹 Project Demo Video
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/index.js" defer></script>
+</body>
+
+</html>

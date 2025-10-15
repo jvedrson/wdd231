@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ederson Villalba - Backend Dev Toolbox" />
+  <meta name="description"
+    content="Tool suggestion submitted successfully. View your submission details and explore more backend development tools." />
+  <meta property="og:title" content="Tool Suggestion Submitted - Backend Dev Toolbox" />
+  <meta property="og:description"
+    content="Thank you for your tool suggestion. We'll review it and consider adding it to our collection." />
+  <meta property="og:image" content="images/backend-toolbox-og.jpg" />
+  <meta property="og:url" content="https://jvedrson.github.io/wdd231/finalproject/form-action.html" />
+  <meta property="og:type" content="website" />
+  <title>Tool Suggestion Submitted - Backend Dev Toolbox</title>
+  <link rel="icon" href="images/favicon.ico" />
+
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Load Google Fonts with font-display=swap to prevent layout shifts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/form-action.css" />
+  <link rel="stylesheet" href="styles/small.css" media="(max-width: 768px)" />
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 769px)" />
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/bdt-logo.webp" alt="Backend Dev Toolbox Logo" width="40" height="40" loading="lazy" />
+        <h1>Backend Dev Toolbox</h1>
+      </div>
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="suggest.html">Suggest Tool</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Success Message -->
+      <section class="success-message">
+        <div class="card success-card">
+          <div class="success-icon">✅</div>
+          <h1>Tool Suggestion Submitted Successfully!</h1>
+          <p>
+            Thank you for contributing to our Backend Dev Toolbox. Your
+            suggestion has been received and will be reviewed by our team.
+          </p>
+        </div>
+      </section>
+
+      <!-- Submission Details -->
+      <section class="submission-details">
+        <h2>Your Submission</h2>
+        <div id="form-data-container" class="form-data-container">
+          <!-- Form data will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Next Steps -->
+      <section class="next-steps">
+        <div class="card">
+          <h2>What Happens Next?</h2>
+          <div class="steps-grid">
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <h3>Review Process</h3>
+              <p>
+                Our team will review your suggestion within 1-2 business days
+                to ensure it meets our quality standards.
+              </p>
+            </div>
+            <div class="step-item">
+              <div class="step-number">2</div>
+              <h3>Evaluation</h3>
+              <p>
+                We'll evaluate the tool based on its utility, documentation
+                quality, and relevance to backend development.
+              </p>
+            </div>
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <h3>Notification</h3>
+              <p>
+                You'll receive an email notification about the status of your
+                submission and any next steps.
+              </p>
+            </div>
+            <div class="step-item">
+              <div class="step-number">4</div>
+              <h3>Publication</h3>
+              <p>
+                If approved, your suggested tool will be added to our
+                collection and made available to all users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Actions -->
+      <section class="related-actions">
+        <div class="card">
+          <h2>Continue Exploring</h2>
+          <div class="action-buttons">
+            <a href="resources.html" class="btn">Browse All Tools</a>
+            <a href="suggest.html" class="btn btn-secondary">Suggest Another Tool</a>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Submissions -->
+      <section class="recent-submissions">
+        <div class="card">
+          <h2>Recent Submissions</h2>
+          <div id="recent-submissions-list" class="submissions-list">
+            <!-- Recent submissions will be populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="suggest.html">Suggest Tool</a>
+        <a href="attributions.html">Attributions</a>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="currentYear"></span> Backend Dev Toolbox - Ederson
+          Villalba
+        </p>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <p>
+          <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+            📹 Project Demo Video
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/form-action.js" defer></script>
+</body>
+
+</html>

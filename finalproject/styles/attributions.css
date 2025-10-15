@@ -1,0 +1,35 @@
+.attributions-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.attributions-content ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 1rem 0;
+}
+
+.attributions-content li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.attributions-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.attributions-content em {
+    font-style: italic;
+    color: var(--text-color);
+}
+
+a {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--accent-primary);
+}
