@@ -1,3 +1,5 @@
+import { safeJsonParse } from './utils.js';
+
 document.addEventListener('DOMContentLoaded', loadHomeStats);
 
 async function loadHomeStats() {
@@ -7,11 +9,11 @@ async function loadHomeStats() {
     try {
         const response = await fetch('data/tools.json');
         const tools = await response.json();
-        
+
         const languages = new Set(tools.map(t => t.language)).size;
         const categories = new Set(tools.map(t => t.category)).size;
-        const favorites = JSON.parse(localStorage.getItem('favorites') || '[]').length;
-        
+        const favorites = safeJsonParse(localStorage.getItem('favorites')).length;
+
         statsContainer.innerHTML = `
             <div class="stat-item">
                 <div class="stat-number">${tools.length}</div>

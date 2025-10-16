@@ -1,16 +1,19 @@
+import toolsData from '../data/tools.js';
+import { safeJsonParse } from './utils.js';
 
 let allTools = [];
 let filteredTools = [];
 
-// Load tools from JSON file
+// Load tools from local JSON file asynchronously, fallback to ES module
 async function loadTools() {
     try {
-        const response = await fetch('data/tools.json');
+        const response = await fetch('./data/tools.json');
+        if (!response.ok) throw new Error('Network response was not ok');
         allTools = await response.json();
         filteredTools = allTools;
     } catch (error) {
-        console.error('Error loading tools:', error);
-        document.getElementById('tools-container').innerHTML = '<p>Error loading tools</p>';
+        allTools = toolsData;
+        filteredTools = toolsData;
     }
 }
 
@@ -29,7 +32,7 @@ function checkURLParams() {
 // Display tools on page
 function displayTools(tools) {
     const container = document.getElementById('tools-container');
-    
+
     if (tools.length === 0) {
         container.innerHTML = '<p class="no-results">No tools found</p>';
         return;
@@ -38,19 +41,24 @@ function displayTools(tools) {
     let html = '';
     for (let i = 0; i < tools.length; i++) {
         const tool = tools[i];
-        const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        const favorites = safeJsonParse(localStorage.getItem('favorites'));
         const isFav = favorites.includes(tool.id);
-        
+
         html += `
             <div class="tool-card">
                 <div class="tool-image">
-                    <img src="${tool.image}" alt="${tool.name}" onerror="this.src='images/backend-icon.svg'">
+                    <img src="${tool.image}" 
+                         alt="${tool.name} logo" 
+                         loading="lazy" 
+                         width="80" 
+                         height="80"
+                         onerror="this.onerror=null; this.src='images/backend-icon.svg';">
                 </div>
                 <div class="tool-content">
                     <div class="tool-header">
                         <h3>${tool.name}</h3>
                         <button class="favorite-btn ${isFav ? 'favorite' : ''}" data-id="${tool.id}" aria-label="${isFav ? 'Remove from favorites' : 'Add to favorites'}">
-                            <img src="images/${isFav ? 'heart-fill' : 'heart'}.svg" alt="${isFav ? 'Filled heart' : 'Empty heart'}" width="20" height="20">
+                            <img src="images/${isFav ? 'heart-fill' : 'heart'}.svg" alt="${isFav ? 'Filled heart' : 'Empty heart'}" width="20" height="20" loading="lazy">
                         </button>
                     </div>
                     <p class="tool-description">${tool.description}</p>
@@ -67,16 +75,16 @@ function displayTools(tools) {
             </div>
         `;
     }
-    
+
     container.innerHTML = html;
-    
+
     // Add event listeners to favorite buttons
     document.querySelectorAll('.favorite-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             const toolId = parseInt(this.dataset.id);
-            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            const favorites = safeJsonParse(localStorage.getItem('favorites'));
             const imgElement = this.querySelector('img');
-            
+
             if (favorites.includes(toolId)) {
                 const index = favorites.indexOf(toolId);
                 favorites.splice(index, 1);
@@ -91,15 +99,15 @@ function displayTools(tools) {
                 this.classList.add('favorite');
                 this.setAttribute('aria-label', 'Remove from favorites');
             }
-            
+
             localStorage.setItem('favorites', JSON.stringify(favorites));
             updateStats();
         });
     });
-    
+
     // Add event listeners to details buttons
     document.querySelectorAll('.details-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             const toolName = this.dataset.name;
             showDetails(toolName);
         });
@@ -110,10 +118,10 @@ function displayTools(tools) {
 function showDetails(toolName) {
     const tool = allTools.find(t => t.name === toolName);
     if (!tool) return;
-    
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+
+    const favorites = safeJsonParse(localStorage.getItem('favorites'));
     const isFav = favorites.includes(tool.id);
-    
+
     const modal = document.createElement('dialog');
     modal.className = 'tool-modal';
     modal.innerHTML = `
@@ -150,17 +158,17 @@ function showDetails(toolName) {
             </div>
         </div>
     `;
-    
+
     document.body.appendChild(modal);
     modal.showModal();
-    
+
     // Add event listener to favorite button in modal
     const favBtn = modal.querySelector('.favorite-btn');
-    favBtn.addEventListener('click', function() {
+    favBtn.addEventListener('click', function () {
         const toolId = parseInt(this.dataset.id);
-        const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        const favorites = safeJsonParse(localStorage.getItem('favorites'));
         const imgElement = this.querySelector('img');
-        
+
         if (favorites.includes(toolId)) {
             const index = favorites.indexOf(toolId);
             favorites.splice(index, 1);
@@ -173,17 +181,17 @@ function showDetails(toolName) {
             this.classList.add('favorite');
             this.innerHTML = '<img src="images/heart-fill.svg" alt="Filled heart" width="20" height="20"> Remove from Favorites';
         }
-        
+
         localStorage.setItem('favorites', JSON.stringify(favorites));
         updateStats();
         displayTools(filteredTools);
     });
-    
+
     modal.querySelector('.modal-close').addEventListener('click', () => {
         modal.close();
         modal.remove();
     });
-    
+
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.close();
@@ -196,12 +204,12 @@ function showDetails(toolName) {
 function updateStats() {
     const statsContainer = document.getElementById('stats-container');
     if (!statsContainer) return;
-    
+
     const totalTools = allTools.length;
     const languages = new Set(allTools.map(t => t.language)).size;
     const categories = new Set(allTools.map(t => t.category)).size;
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]').length;
-    
+    const favorites = safeJsonParse(localStorage.getItem('favorites')).length;
+
     statsContainer.innerHTML = `
         <div class="stat-item">
             <div class="stat-number">${totalTools}</div>
@@ -228,30 +236,30 @@ function setupFilters() {
     const languageFilter = document.getElementById('language-filter');
     const categoryFilter = document.getElementById('category-filter');
     const clearBtn = document.getElementById('clear-filters');
-    
+
     // Populate filter dropdowns
     const languages = [...new Set(allTools.map(t => t.language))].sort();
     const categories = [...new Set(allTools.map(t => t.category))].sort();
-    
+
     languages.forEach(lang => {
         const option = document.createElement('option');
         option.value = lang;
         option.textContent = lang;
         languageFilter.appendChild(option);
     });
-    
+
     categories.forEach(cat => {
         const option = document.createElement('option');
         option.value = cat;
         option.textContent = cat;
         categoryFilter.appendChild(option);
     });
-    
+
     // Search functionality
     searchInput.addEventListener('input', applyFilters);
     languageFilter.addEventListener('change', applyFilters);
     categoryFilter.addEventListener('change', applyFilters);
-    
+
     clearBtn.addEventListener('click', () => {
         searchInput.value = '';
         languageFilter.value = '';
@@ -265,19 +273,19 @@ function applyFilters() {
     const searchTerm = document.getElementById('search-input').value.toLowerCase();
     const language = document.getElementById('language-filter').value;
     const category = document.getElementById('category-filter').value;
-    
+
     filteredTools = allTools.filter(tool => {
-        const matchesSearch = searchTerm === '' || 
+        const matchesSearch = searchTerm === '' ||
             tool.name.toLowerCase().includes(searchTerm) ||
             tool.description.toLowerCase().includes(searchTerm) ||
             tool.category.toLowerCase().includes(searchTerm);
-        
+
         const matchesLanguage = language === '' || tool.language === language;
         const matchesCategory = category === '' || tool.category === category;
-        
+
         return matchesSearch && matchesLanguage && matchesCategory;
     });
-    
+
     displayTools(filteredTools);
 }
 

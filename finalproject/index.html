@@ -16,14 +16,26 @@
   <title>Backend Dev Toolbox - Essential Tools for Backend Developers</title>
   <link rel="icon" href="images/favicon.ico" />
 
-  <!-- Preconnect to Google Fonts for faster loading -->
+  <!-- Preconnect to external domains for faster resource loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.vectorlogo.zone" />
+  <link rel="dns-prefetch" href="https://gorm.io" />
+  <link rel="dns-prefetch" href="https://fastapi.tiangolo.com" />
 
-  <!-- Load Google Fonts with font-display=swap to prevent layout shifts -->
+  <!-- Preload critical resources -->
+  <link rel="preload" href="styles/base.css" as="style" />
+  <link rel="preload" href="images/bdt-logo.webp" as="image" />
+
+  <!-- Load Google Fonts asynchronously with font-display=swap -->
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+  </noscript>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/base.css" />
@@ -36,8 +48,7 @@
   <header>
     <div class="header-content">
       <div class="logo">
-        <img src="images/bdt-logo.webp" alt="Backend Dev Toolbox Logo" width="40" height="40" loading="lazy" />
-        <!-- Explicit width/height already set for logo image -->
+        <img src="images/bdt-logo.webp" alt="Backend Dev Toolbox Logo" width="40" height="40" fetchpriority="high" />
         <h1>Backend Dev Toolbox</h1>
       </div>
       <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu"></button>
@@ -180,8 +191,8 @@
     </div>
   </footer>
 
-  <script src="scripts/main.js" defer></script>
-  <script src="scripts/index.js" defer></script>
+  <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/index.js" type="module"></script>
 </body>
 
 </html>

@@ -1,13 +1,15 @@
+import { safeJsonParse } from './utils.js';
+
 // Form validation and submission
 const form = document.getElementById('tool-form');
 
 // Validate when user leaves a field
 document.querySelectorAll('.form-control').forEach(field => {
-    field.addEventListener('blur', function() {
+    field.addEventListener('blur', function () {
         validateField(this);
     });
 
-    field.addEventListener('input', function() {
+    field.addEventListener('input', function () {
         this.classList.remove('field-invalid');
     });
 });
@@ -15,14 +17,14 @@ document.querySelectorAll('.form-control').forEach(field => {
 // Validate individual field
 function validateField(field) {
     const value = field.value.trim();
-    
+
     // Check if required field is empty
     if (field.hasAttribute('required') && value === '') {
         field.classList.add('field-invalid');
         field.classList.remove('field-valid');
         return false;
     }
-    
+
     // Validate URL field
     if (field.type === 'url' && value !== '') {
         try {
@@ -36,7 +38,7 @@ function validateField(field) {
             return false;
         }
     }
-    
+
     // Field is valid
     if (value !== '') {
         field.classList.add('field-valid');
@@ -48,32 +50,32 @@ function validateField(field) {
 // Validate entire form
 function validateForm() {
     let isValid = true;
-    
+
     // Check required fields
     const name = document.getElementById('name');
     const language = document.getElementById('language');
     const category = document.getElementById('category');
     const url = document.getElementById('url');
     const description = document.getElementById('description');
-    
+
     // Validate name
     if (name.value.trim() === '') {
         name.classList.add('field-invalid');
         isValid = false;
     }
-    
+
     // Validate language
     if (language.value === '') {
         language.classList.add('field-invalid');
         isValid = false;
     }
-    
+
     // Validate category
     if (category.value === '') {
         category.classList.add('field-invalid');
         isValid = false;
     }
-    
+
     // Validate URL
     if (url.value.trim() === '') {
         url.classList.add('field-invalid');
@@ -86,13 +88,13 @@ function validateForm() {
             isValid = false;
         }
     }
-    
+
     // Validate description
     if (description.value.trim() === '') {
         description.classList.add('field-invalid');
         isValid = false;
     }
-    
+
     return isValid;
 }
 
@@ -118,9 +120,9 @@ modal.addEventListener('click', (event) => {
 });
 
 // Handle form submission
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
-    
+
     // Validate form before submitting
     if (!validateForm()) {
         showValidationModal();
@@ -141,7 +143,7 @@ form.addEventListener('submit', function(event) {
     };
 
     // Save to localStorage
-    const submissions = JSON.parse(localStorage.getItem('tool-suggestions') || '[]');
+    const submissions = safeJsonParse(localStorage.getItem('tool-suggestions'));
     submissions.push(toolData);
     localStorage.setItem('tool-suggestions', JSON.stringify(submissions));
 

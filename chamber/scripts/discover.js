@@ -35,7 +35,6 @@ async function loadDiscoverItems() {
 
         displayItems(items);
     } catch (error) {
-        console.error('Error loading discover items:', error);
         discoverCardsContainer.innerHTML =
             '<p class="error">Unable to load discover items. Please try again later.</p>';
     }
@@ -51,8 +50,8 @@ function displayItems(items) {
 
         // Set fetchpriority and no lazy loading at the first 3 images
         const isFirstImages = index < 3;
-        const imgAttributes = isFirstImages 
-            ? `fetchpriority="high"` 
+        const imgAttributes = isFirstImages
+            ? `fetchpriority="high"`
             : `loading="lazy"`;
 
         card.innerHTML = `

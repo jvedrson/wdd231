@@ -1,5 +1,7 @@
+import { formatDate, safeJsonParse } from './utils.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-    const submissions = JSON.parse(localStorage.getItem('tool-suggestions') || '[]');
+    const submissions = safeJsonParse(localStorage.getItem('tool-suggestions'));
     const formDataContainer = document.getElementById('form-data-container');
     const recentSubmissionsList = document.getElementById('recent-submissions-list');
 
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p><strong>Official Website:</strong> <a href="${latestSubmission.url}" target="_blank" rel="noopener">${latestSubmission.url}</a></p>
                     <p><strong>Description:</strong> ${latestSubmission.description}</p>
                     ${latestSubmission.additionalInfo ? `<p><strong>Additional Information:</strong> ${latestSubmission.additionalInfo}</p>` : ''}
-                    <p><strong>Submitted:</strong> ${new Date(latestSubmission.submittedAt).toLocaleString()}</p>
+                    <p><strong>Submitted:</strong> ${formatDate(latestSubmission.submittedAt)}</p>
                 </div>
             </div>
         `;
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="submission-item">
                 <h4>${submission.name}</h4>
                 <p><strong>Category:</strong> ${submission.category} | <strong>Language:</strong> ${submission.language}</p>
-                <p class="submission-date">Submitted: ${new Date(submission.submittedAt).toLocaleDateString()}</p>
+                <p class="submission-date">Submitted: ${formatDate(submission.submittedAt)}</p>
             </div>
         `;
     }
